@@ -8780,7 +8780,7 @@ Lock-free programming rule summary:
 * ???
 * ???
 
-### <a name="Rconc"></a> Don't use lock-free programming unless you absolutely have to
+### <a name="Rconc"></a> CP.free.1: Don't use lock-free programming unless you absolutely have to
 
 ##### Reason
 
@@ -8788,7 +8788,7 @@ Lock-free programming rule summary:
 
 **Alternative**: Use lock-free data structures implemented by others as part of some library.
 
-### <a name="Rconc"></a> If lock-free programming becomes necessary, consider using the default memory ordering for atomic operations
+### <a name="Rconc"></a> CP.free.2:  If lock-free programming becomes necessary, consider using the default memory ordering for atomic operations
 
 #### Reason
  Anything weaker than default sequential consistency makes reasoning about data visibility guarantees and program correctness nontrivial.
@@ -8800,7 +8800,7 @@ Lock-free programming rule summary:
   these architectures begin to converge to stronger memory models, such as x86, the penalty for using `std::memory_order_seq_cst` becomes 
   less relevant.
 
-  
+
 
 # <a name="S-errors"></a> E: Error handling
 
