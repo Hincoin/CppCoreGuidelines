@@ -8797,8 +8797,7 @@ Lock-free programming rule summary:
 #### Note
   In some architectures such as ARM and PowerPC, using the default `std::memory_order_seq_cst` can have unwanted synchronization
   at the hardware level by generating heavy memory fences in order to achieve the guarantees mandated by `std::memory_order_seq_cst`. If these operations are done in a tight loop, the effects on program performance can be detrimental. Because of this, atomic operations with weaker ordering can be used to avoid issuing memory fences and still preserve the necessary data visiblity guarantees. However, as 
-  these architectures begin to converge to stronger memory models, such as x86, the penalty for using `std::memory_order_seq_cst` becomes 
-  less relevant.
+  these architectures begin to converge to stronger memory models, similar to x86, the penalty for using `std::memory_order_seq_cst` becomes less relevant.
 
 
 
